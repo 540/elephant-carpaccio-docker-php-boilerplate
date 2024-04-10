@@ -7,6 +7,6 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
-COPY /src/index.html /540/ElephantCarpaccio
+COPY /src/index.php /540/ElephantCarpaccio
 EXPOSE 80
 CMD ["php"]
